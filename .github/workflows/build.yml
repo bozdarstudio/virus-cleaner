@@ -51,11 +51,11 @@ jobs:
         with:
           name: VirusCleaner-apk
           path: build/app/outputs/flutter-apk/app-release.apk
-      - name: Upload APK to release v1.0.0
+      - name: Upload APK to release v1.1.0
         if: always()
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cp build/app/outputs/flutter-apk/app-release.apk VirusCleaner-v1.0.0.apk
-          gh release upload v1.0.0 VirusCleaner-v1.0.0.apk --clobber
+          cp build/app/outputs/flutter-apk/app-release.apk VirusCleaner-v1.1.0.apk
+          gh release upload v1.1.0 VirusCleaner-v1.1.0.apk --clobber
